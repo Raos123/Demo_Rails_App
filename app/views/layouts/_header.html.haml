@@ -1,7 +1,7 @@
 %header{class:"navbar navbar-fixed-top"}
   .navbar-inner
     .container
-      = link_to "Sample App", '#', id: "logo"
+      = link_to "Sample App", root_path, id: "logo"
       %nav
         %ul{class:"nav pull-right"}
           %li
@@ -9,5 +9,5 @@
           %li
             = link_to "Help", help_path
           %li
-            = link_to "Sign in",  '#'
+            = link_to "Sign in",  signup_path
               
