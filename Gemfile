@@ -6,6 +6,10 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'haml-rails'
 gem 'bootstrap-sass', '2.0.0'
+gem 'bcrypt-ruby', '3.0.1'
+
+
+gem 'annotate', '~> 2.4.1.beta', group: :development
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
