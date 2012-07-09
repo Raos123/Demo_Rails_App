@@ -1,5 +1,10 @@
 @import "bootstrap"
 
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea
+
+
 /* Universal */
 html
   overflow-y: scroll
@@ -34,7 +39,7 @@ h2
   margin-bottom: 30px
   text-align: center
   font-weight: normal
-  color: #999
+  color: $grayLight
   
 p
   font-size 1.1em
@@ -45,7 +50,7 @@ p
   float: left
   margin-right: 10px
   font-size: 1.7em
-  color: #fff
+  color: white
   text-transform: uppercase
   letter-spacing: -1px
   padding-top: 9px
@@ -53,5 +58,26 @@ p
   line-height: 1
   
 #logo:hover
-  color: #fff
+  color: white
   text-decoration: none
+  
+
+/* Footer */
+
+footer
+  margin-top 45px
+  padding-top: 5px
+  border-top: 1px solid $grayMediumLight
+  color: $grayLight
+  a
+    color: $gray
+    &:hover
+      color: $grayDarker
+  small
+    float: left
+  ul
+    float: right
+    list-style: none
+    li
+      float: left
+      margin-left: 10px
