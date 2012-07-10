@@ -4,18 +4,5 @@
 .row
   .span6.offset3
     = form_for(@user) do |user|
-      = render 'shared/error_messages', object: @user
-      
-      = user.label :name
-      = user.text_field :name
-      
-      = user.label :email
-      = user.text_field :email
-      
-      = user.label :password
-      = user.password_field :password
-      
-      = user.label :password_confirmation, "Confirmation"
-      = user.password_field :password_confirmation
-      
+      = render "form", user:user
       = user.submit "Create my account", class: "btn btn-large btn-primary"

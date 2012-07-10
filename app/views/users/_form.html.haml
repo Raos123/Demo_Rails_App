@@ -1,0 +1,13 @@
+= render 'shared/error_messages', object:@user
+      
+= user.label :name
+= user.text_field :name
+
+= user.label :email
+= user.text_field :email
+
+= user.label :password
+= user.password_field :password
+
+= user.label :password_confirmation, "Confirm Password"
+= user.password_field :password_confirmation
