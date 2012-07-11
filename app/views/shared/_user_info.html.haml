@@ -1,0 +1,4 @@
+= content_tag(:a, gravatar_for(current_user, size: 52), href: user_path(current_user))
+= content_tag(:h1,current_user.name)
+= content_tag(:span, link_to("view my profile", current_user))
+= content_tag(:span, pluralize(current_user.microposts.count, "micropost") )
