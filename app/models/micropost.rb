@@ -1,4 +1,3 @@
-
 # == Schema Information
 #
 # Table name: microposts
@@ -9,7 +8,6 @@
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
 #
-
 class Micropost < ActiveRecord::Base
   attr_accessible :content
   belongs_to :user

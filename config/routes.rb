@@ -1,6 +1,9 @@
 DemoRailsApp::Application.routes.draw do
-  get "microposts/create"
 
+  
+  root :to => 'static_pages#home'
+
+  get "microposts/create"
   get "microposts/destroy"
 
   resources :users do
@@ -8,6 +11,7 @@ DemoRailsApp::Application.routes.draw do
       get :following, :followers
     end
   end
+
   resources :sessions , only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
@@ -68,7 +72,6 @@ DemoRailsApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 
