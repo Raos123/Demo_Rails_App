@@ -2,13 +2,7 @@
 .row
   %aside.span4
     %section
-      = gravatar_for @user
-      = content_tag(:h1, @user.name)
-      %span
-        = link_to "view my profile", @user
-      %span
-        %b Microposts
-        = @user.microposts.count
+      = render 'shared/user_info'
     %section
       = render 'shared/stats'
     %section
