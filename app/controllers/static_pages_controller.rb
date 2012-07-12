@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  before_filter :store_location, only: [:home]
 
   def home
     if signed_in?
