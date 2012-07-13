@@ -4,12 +4,8 @@
 $ ->
   setupCountdown()
 setupCountdown  = ->
-  $('#micropost_content').keydown(method).keyup(method)
-s = true
+  $('#micropost_content').change(method).keyup(method)
 method  = ->
-  if s
-    s = false
-    text = 140-$(this).val().length
-    text = if text < 0 then "Content is too long." else text+" characters left."
-    $('#countdown').text(text)
-    s = true
+  if $(this).val().length > 140
+    $(this).val($(this).val().substr(0, 140))
+  $('#countdown').text( 140 - $(this).val().length+" characters left")
