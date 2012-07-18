@@ -11,7 +11,7 @@
           - @users.each do |user|
             = link_to gravatar_for(user, size: 30), user
   .span8
-    = content_tag(:h3, @title)
+    %h3= @title
     - if @users.any?
       %ul.users
         = render @users

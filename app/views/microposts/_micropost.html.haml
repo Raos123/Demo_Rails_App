@@ -1,5 +1,5 @@
 %li
-  = content_tag(:span, wrap(micropost.content), class: "content")
-  = content_tag(:span, "Posted #{time_ago_in_words(micropost.created_at)} ago.")
+  %span.content= wrap(micropost.content)
+  %span="Posted #{time_ago_in_words(micropost.created_at)} ago."
   - if current_user?(micropost.user)
     = render "shared/micropost_delete", micropost: micropost
