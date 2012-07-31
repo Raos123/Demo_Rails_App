@@ -1,5 +1,5 @@
 %li
   %span.content= wrap(micropost.content)
   %span="Posted #{time_ago_in_words(micropost.created_at)} ago."
-  - if current_user?(micropost.user)
+  - if can? :destroy, micropost
     = render "shared/micropost_delete", micropost: micropost

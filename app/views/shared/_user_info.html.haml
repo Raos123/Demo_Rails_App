@@ -1,8 +1,5 @@
 - @user ||= current_user
 = link_to gravatar_for(@user, size: 52), user_path(@user)
-%h1
-  = @user.name
-%span
-  = link_to "view my profile", @user
-%span
-  = pluralize @user.microposts.count, "micropost"
+%h1= @user.name
+%span= link_to "view my profile", @user
+%span= pluralize @user.microposts.count, "micropost"
